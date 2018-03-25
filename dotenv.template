@@ -1,0 +1,12 @@
+# Copy to .evn and set values
+
+# Set the database user here
+# ! Make sure both entries match!
+REDMINE_DB_MYSQL=redmine
+MYSQL_DATABASE=redmine
+
+# Set the database password here
+# ! Make sure both entries match!
+REDMINE_DB_PASSWORD=
+MYSQL_ROOT_PASSWORD=
+
