@@ -12,7 +12,7 @@ services:
             REDMINE_DB_MYSQL: db
             REDMINE_DB_PASSWORD: example
         ports:
-            - 9001:9002
+            - 9002:9001
 
     # see https://hub.docker.com/_/mysql/
     redmine_db:
