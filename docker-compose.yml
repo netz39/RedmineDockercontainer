@@ -10,16 +10,23 @@ services:
         restart: always
         environment:
             REDMINE_DB_MYSQL: db
-            REDMINE_DB_PASSWORD: example
+            # This value comes from the environment
+            REDMINE_DB_PASSWORD:
         ports:
-            - 9002:9001
+            # Move to port 9002 for the reverse proxy
+            - 9002:3000
 
     # see https://hub.docker.com/_/mysql/
-    redmine_db:
+    db:
         image: mysql:5.7
         restart: always
         environment:
+            # These values come from the environment
             MYSQL_ROOT_PASSWORD:
             MYSQL_DATABASE:
         volumes:
             - ./backups:/tmp/backups
+            - redmine_data:/var/lib/mysql
+
+volumes:
+    redmine_data:

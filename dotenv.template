@@ -2,7 +2,6 @@
 
 # Set the database user here
 # ! Make sure both entries match!
-REDMINE_DB_MYSQL=redmine
 MYSQL_DATABASE=redmine
 
 # Set the database password here
