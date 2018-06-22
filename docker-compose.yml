@@ -29,6 +29,7 @@ services:
             MYSQL_DATABASE:
         volumes:
             - ./backups:/tmp/backups
+            - redmine_files:/tmp/attachments
             - redmine_data:/var/lib/mysql
 
 volumes:
