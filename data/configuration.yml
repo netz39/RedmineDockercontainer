@@ -1,0 +1,13 @@
+default:
+  # Outgoing emails configuration (see examples above)
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      tls: false
+      address: mail.myemaildomain.com
+      port: 587
+      domain: myemaildomain.com
+      authentication: :login
+      user_name: "redmine@myemaildomain.com"
+      password: "my-secret-password"
+      openssl_verify_mode: 'none'
