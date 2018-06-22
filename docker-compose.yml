@@ -17,6 +17,7 @@ services:
             - 9002:3000
         volumes:
             - ./data/configuration.yml:/usr/src/redmine/config/configuration.yml
+            - redmine_files:/usr/src/redmine/files
 
     # see https://hub.docker.com/_/mysql/
     db:
@@ -32,3 +33,4 @@ services:
 
 volumes:
     redmine_data:
+    redmine_files:
