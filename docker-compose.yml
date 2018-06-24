@@ -21,7 +21,7 @@ services:
 
     # see https://hub.docker.com/_/mysql/
     db:
-        image: mysql:5.7
+        build: ./docker/mysql
         restart: always
         environment:
             # These values come from the environment
@@ -29,6 +29,7 @@ services:
             MYSQL_DATABASE:
         volumes:
             - ./backups:/tmp/backups
+            - redmine_files:/tmp/attachments
             - redmine_data:/var/lib/mysql
 
 volumes:

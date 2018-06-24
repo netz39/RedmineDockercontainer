@@ -8,5 +8,6 @@ BCKFILE=$BASEDIR/$BCKDIR/redmine_$BCKPFX.sql
 
 mkdir -p $BASEDIR/$BCKDIR
 
-mysqldump --user redmine redmine > $BCKFILE
+mysqldump --user root -p$MYSQL_ROOT_PASSWORD $MYSQL_DATABASE > $BCKFILE
+
 bzip2 $BCKFILE
