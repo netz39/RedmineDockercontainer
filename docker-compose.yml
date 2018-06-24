@@ -21,7 +21,7 @@ services:
 
     # see https://hub.docker.com/_/mysql/
     db:
-        image: mysql:5.7
+        build: ./docker/mysql
         restart: always
         environment:
             # These values come from the environment
