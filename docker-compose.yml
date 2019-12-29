@@ -18,6 +18,7 @@ services:
         volumes:
             - ./data/configuration.yml:/usr/src/redmine/config/configuration.yml
             - redmine_files:/usr/src/redmine/files
+            - ./themes:/usr/src/redmine/public/themes
 
     # see https://hub.docker.com/_/mysql/
     db:
